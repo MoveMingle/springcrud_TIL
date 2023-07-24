@@ -1,0 +1,9 @@
+/scott/dept 요청 URL
+
+mybatis
+org.doit.ik.mapper 패키지 
+ ㄴSampleMapper.java 복사 붙이기 -> DeptMapper.java 수정 
+ 
+ 
+ 
+ /scott/dept/10
