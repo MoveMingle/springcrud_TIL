@@ -1,0 +1,51 @@
+/board/list 게시글 목록 요청 url
+--검색기능 추가구현--
+
+1)검색조건 선택 + 검색어 입력[검색] list.jsp
+2)
+--원래 쿼리--
+ SELECT bno, title, content, writer, regdate, updatedate
+      FROM (
+               SELECT /*+INDEX_DESC(tbl_board pk_tblboard_bno )*/
+                      rownum rn, bno, title, content, writer, regdate, updatedate
+               FROM tbl_board 					
+               WHERE rownum <= #{ pageNum} * #{ amount }
+            )
+      WHERE rn > (#{ pageNum } - 1) * #{ amount }    
+     
+
+
+
+
+
+
+
+
+--제목 or 내용 검색--
+
+
+ SELECT bno, title, content, writer, regdate, updatedate
+      FROM (
+               SELECT /*+INDEX_DESC(tbl_board pk_tblboard_bno )*/
+                      rownum rn, bno, title, content, writer, regdate, updatedate
+               FROM bno				
+               WHERE 
+               /////////////////////////// 동적 SQL 'TW'
+               REGEXP (title, '검색어','i')
+            	OR
+            	REGEXP(content,'검색어','i')
+            	OR
+            	REGEXP(writer,'검색어','i')
+            	///////////////////////////////
+            	
+               AND rownum <= #{ pageNum} * #{ amount }
+            )
+      WHERE rn > (#{ pageNum } - 1) * #{ amount }    
+      
+      
+      
+      
+      2)검색버튼 클릭 
+      
+      
+      
