@@ -1,0 +1,19 @@
+[notice.htm] 요청 URL로 사용
+
+JSP 프로젝트 -> 스프링 MVC 프로젝트를 변환
+[NoticeController, NoticeDetailController 를 사용하는 첫번째 스프링 MVC예제]
+
+(어제)공지사항
+	ㄴ목록 			/customer/notice.htm -> NoticeController.java
+	ㄴ상세보기		/customer/noticeDetail.htm -> NoticeDetailController.java
+	servlet-context.xml
+	<bean> 스프링 빈 객체를 생성 + DI(의존성 주입)
+
+(오늘)
+-> 공지사항 관련 하나의 컨트롤러를 선언
+	ㄴ목록			"컨트롤러 메서드 " 선언
+	ㄴ상세보기      "컨트롤러 메서드" 선언
+	servlet-context.xml수정 객체 자동 생성 + DI
+	
+	
+	
