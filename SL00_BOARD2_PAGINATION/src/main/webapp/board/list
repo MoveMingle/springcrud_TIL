@@ -1,0 +1,6 @@
+/board/list 게시글 목록 요청 url
+/board/register BoardController+컨트롤럴메서드 선언->BoardService->BoardMapper->registeDate.jsp
+
+
+\board/get?bno=5
+
