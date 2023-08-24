@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	
+
+<!-- 	p104 @Autowired 또는 @Resource 어노테이션을 사용하려면 추가 -->	
+	<context:annotation-config/> <!-- 오류는 왜?? namespace에서 체크/.. -->
+
+	<bean id="record" class="org.doit.ik.di3.RecordImpl3" />
+	<bean id="record2" class="org.doit.ik.di3.RecordViewImpl3"/> 
+	<bean id="rvi" class="org.doit.ik.di3.RecordViewImpl3"/>
+<!-- 		new일때는 찾기 편함  주입 ->class 분석 -->
+	
+	
+	
+	
+</beans>

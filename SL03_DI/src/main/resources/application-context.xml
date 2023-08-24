@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+	<!-- RecordImpl record = new RecordImpl(); -->
+	<bean id="record" class="org.doit.ik.di.RecordImpl" />
+	<!-- bean's class, except if it serves only as a parent definition for child 
+		패키지명까지 줘야함 bean definitions. rvi.setRecord -->
+	<bean id="rvi" class="org.doit.ik.di.RecordViewImpl">
+		<constructor-arg ref="record"></constructor-arg>
+
+<!-- 		<property name="record" ref="record"></property> -->
+ <!-- 	setter
+<property name="record" >
+	<ref bean ="record"/>
+	
+	
+</property> -->
+
+	<!-- <property name="setrecord" ref="개체record"></property> -->
+
+	</bean>
+	
+</beans>
